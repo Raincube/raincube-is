@@ -26,7 +26,7 @@ var route = {
     }
     var event = JSON.parse(body);
     console.log(event);
-    var value = event.eventData.temperature;
+    var value = event.eventData;
     console.log(value);
     initialState.sendEvent('test_bucket', value, function(err, resp, body) {
       console.log('InitialState response code:' + resp.statusCode.toString());
