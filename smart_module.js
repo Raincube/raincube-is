@@ -28,8 +28,8 @@ var route = {
     console.log(event);
     var value = event.eventData;
     console.log(value);
-    initialState.sendEvent('test_bucket', value, function(err, resp, body) {
-      console.log('InitialState response code:' + resp.statusCode.toString());
+    initialState.sendEvent('test_bucket', value, function(err, res, body) {
+      console.log('InitialState response code:' + res.statusCode.toString());
     });
   }
 }
