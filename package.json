@@ -1,0 +1,15 @@
+{
+  "name": "initialstate-smart-module",
+  "version": "1.1.0",
+  "description": "A sample smart module for InitialState",
+  "main": "smart_module.js",
+  "scripts": {
+    "start": "node smart_module.js"
+  },
+  "dependencies": {
+    "request": "latest"
+  },
+  "engines": {
+    "node": "0.12.x"
+  }
+}
