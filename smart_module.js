@@ -28,8 +28,15 @@ var route = {
     console.log(event);
     var value = event.eventData;
     console.log(value);
-    initialState.sendEvent('test_bucket', value);
+    value.forEach(sendWaterData);
+    // initialState.sendEvent('test_bucket', 'temperature', value, function(err, resp, body) {
+    //   console.log('InitialState response code:' + resp.statusCode.toString());
+    // });
   }
+}
+
+function sendWaterData(element, index, array){
+  initialState.sendEvent('test_bucket', element[index][0], element[index][1]);
 }
 
 function checkWebhookSignature(_url, body, signature) {
